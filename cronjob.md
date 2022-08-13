@@ -4,7 +4,7 @@ The system admins team has prepared scripts to automate several day-to-day tasks
 
 a. Install cronie package on all app servers and start crond service.
 
-b. Add a cron */5 * * * * echo hello > /tmp/cron_text for root user.
+b. Add a cron `*/5 * * * * echo hello > /tmp/cron_text` for `root` user.
 
 ## Solution
 
@@ -31,7 +31,6 @@ b. Add a cron */5 * * * * echo hello > /tmp/cron_text for root user.
 Add below line and save using `:wq`
 
 ```
-Output:
 */5 * * * * root echo hello > /tmp/cron_text
 ```
 
@@ -40,6 +39,7 @@ Output:
 `crontab -l`
 
 ```
+Output:
 */5 * * * * root echo hello > /tmp/cron_text
 ```
 
