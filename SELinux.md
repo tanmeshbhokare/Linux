@@ -8,36 +8,21 @@ Install the required packages of SElinux on App server 3 in XYZ Datacenter and d
 ## Solution
 
 #### Step 1 : SSH to App Server 3
-`ssh user@hostname`
+`ssh user@appserver3`
 
 #### Step 2 : Install packages required for selinux 
-`sudo yum install policycoreutils policycoreutils-python setools setools-console setroubleshoot`
+`sudo yum install policycoreutils policycoreutils-python setools setools-console setroubleshoot selinux-policy selinux-policy-targeted`
 
-[banner@stapp03 ~]$ sudo rpm -qa | grep selinux
+#### Step 3 : verify selinux packages
+
+`sudo rpm -qa | grep selinux`
+```
 selinux-policy-targeted-3.13.1-268.el7_9.2.noarch
 libselinux-2.5-15.el7.x86_64
 libselinux-python-2.5-15.el7.x86_64
 selinux-policy-3.13.1-268.el7_9.2.noarch
 libselinux-utils-2.5-15.el7.x86_64
-[banner@stapp03 ~]$ 
+```
 
-
-[banner@stapp03 ~]$ history
-    1  sudo yum install policycoreutils policycoreutils-python setools setools-console setroubleshoot
-    2  kill -99 747
-    3  kill -9 747
-    4  sudo kill -9 747
-    5  sudo yum install policycoreutils policycoreutils-python setools setools-console setroubleshoot
-    6  vi /etc/selinux/config
-    7  sudo rpm -qa | grep selinux
-    8  sudo yum install selinux-policy
-    9  sudo rpm -qa | grep selinux
-   10  sudo yum install selinux-policy-targetted
-   11  sudo yum install selinux-policy-targeted
-   12  vi /etc/selinux/config
-   13  sudo vi /etc/selinux/config
-   14  sestatus
-   15  sudo rpm -qa | grep selinux
-   16  history
-[banner@stapp03 ~]$ 
-
+#### Step 4 : Check Selinux status
+`sestatus`
