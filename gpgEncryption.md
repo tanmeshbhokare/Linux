@@ -8,3 +8,17 @@ Encrypt `/home/encrypt_me.txt` to `/home/encrypted_me.asc`.
 
 Decrypt `/home/decrypt_me.asc` to `/home/decrypted_me.txt`. (Passphrase for decryption and encryption is tanmesh).
 
+## Solution
+
+#### Step 1 : SSH to storage server
+
+`ssh user@storageserver`
+
+#### Step 2 : encrypt with passphrase
+
+`sudo gpg --output encrypted_me.asc -c encrypt_me.txt`
+
+#### Step 3 : decrypt with passphrase
+
+`sudo gpg --output decrypted_me.txt --decrypt decrypt_me.asc`
+
