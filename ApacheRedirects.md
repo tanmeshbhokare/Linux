@@ -35,3 +35,34 @@ Modify `Listen 8080` to `Listen 8088`
 
 Listen 8088
 ```
+#### Step 4 : create `main.conf` file
+  
+  `vi /etc/httpd/conf.d/main.conf`
+  
+```
+<VirtualHost *:8088>
+
+ServerName stapp02.stratos.xfusioncorp.com
+
+Redirect 301 / http://www.stapp02.stratos.xfusioncorp.com:8088/
+
+</VirtualHost>
+ 
+
+<VirtualHost *:8088>
+
+ServerName www.stapp02.stratos.xfusioncorp.com:8088/blog/
+
+Redirect 302 /blog/ http://www.stapp02.stratos.xfusioncorp.com:8088/news/
+
+</VirtualHost>
+```
+#### Step 5 : Restart `httpd` service
+  
+  `systemctl restart httpd`
+  
+#### Step 6 : Verify the changes
+
+  `curl http://stapp02.stratos.xfusioncorp.com:8088/`
+  
+  `curl http://www.stapp02.stratos.xfusioncorp.com:8088/blog/`
