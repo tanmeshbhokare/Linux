@@ -45,7 +45,6 @@ Header always set X-XSS-Protection "1;  mode=block"
 Header set X-Frame-Options SAMEORIGIN
 Header set X-Content-Type-Options nosniff
 ```
-
 #### Step 5 : Create index.html
 
 `sudo vi /var/www/html/index.html`
@@ -60,7 +59,7 @@ Add below line in index.html
 
 `sudo systemctl start httpd`
 
-#### Step 5 : Test using curl
+#### Step 7 : Test using curl
 
 `curl -i localhost:5000`
 
