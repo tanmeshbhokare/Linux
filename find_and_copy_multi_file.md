@@ -1,6 +1,6 @@
 # Scenario
 
- There was some users data copied on App Server 3 at `/home/usersdata` location by the Nautilus production support team in Stratos DC. 
+ There was some users data copied on App Server 3 at `/home/usersdata` location by the production support team in DC. 
  
  Later they found that they mistakenly mixed up different user data there. Now they want to filter out some user data and copy it to another location.
  
