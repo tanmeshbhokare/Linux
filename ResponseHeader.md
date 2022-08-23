@@ -21,3 +21,18 @@ X-Content-Type-Options header with value nosniff
 Note: You can test using curl on the given app server as LBR URL will not work for this task.
 
 
+## Solution
+
+Step 1 : ssh to app server
+
+Step 2 : install httpd uging yum
+
+Step 3 : configure httpd.conf
+
+`sudo vi /etc/httpd/conf/httpd.conf`
+
+Step 4 : Enable and start httpd
+
+`sudo systemctl enable httpd`
+
+`sudo systemctl start httpd`
