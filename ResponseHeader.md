@@ -38,3 +38,24 @@ Step 4 : Enable and start httpd
 `sudo systemctl start httpd`
 
 Step 5 :
+
+
+```
+[steve@stapp02 ~]$ sudo vi /etc/httpd/conf/httpd.conf
+[steve@stapp02 ~]$ 
+[steve@stapp02 ~]$ 
+[steve@stapp02 ~]$ tail /etc/httpd/conf/httpd.conf
+EnableSendfile on
+
+# Supplemental configuration
+#
+# Load config files in the "/etc/httpd/conf.d" directory, if any.
+IncludeOptional conf.d/*.conf
+
+Header always set X-XSS-Protection "1;  mode=block"
+Header set X-Frame-Options SAMEORIGIN
+Header set X-Content-Type-Options nosniff
+[steve@stapp02 ~]$ 
+[steve@stapp02 ~]$ 
+[steve@stapp02 ~]$ 
+```
