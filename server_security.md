@@ -9,16 +9,24 @@ b. There is a website hosted under /var/www/html/beta on App Server 2. It was de
 c. Also make sure to restart the Apache service after making the changes.
 
 ## Solution
+Step 1: SSH to App server 2
 
-sudo vi /etc/httpd/conf/httpd.conf
 
-And add/modify/append the lines below:
+Step 2: open `httpd.conf` for modifying
 
+`sudo vi /etc/httpd/conf/httpd.conf`
+
+Step 2.1: append the lines below
+
+```
 ServerTokens Prod
 ServerSignature Off 
+```
 
-Then find the line: Options Indexes FollowSymLinks
+Step 2.2: Then find the line: `Options Indexes FollowSymLinks`
 
-Change that line to: Options FollowSymLinks
+Change that line to: `Options FollowSymLinks`
 
-sudo systemctl restart httpd
+Step 3: Restart the apache server
+
+`sudo systemctl restart httpd`
