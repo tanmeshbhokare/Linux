@@ -14,7 +14,9 @@ Step 1: SSH to App server 2
 
 Step 2: open `httpd.conf` for modifying
 
-```sudo vi /etc/httpd/conf/httpd.conf```
+```
+sudo vi /etc/httpd/conf/httpd.conf
+```
 
 Step 2.1: append the lines below
 
