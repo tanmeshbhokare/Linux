@@ -10,7 +10,9 @@ c. Also make sure to restart the Apache service after making the changes.
 
 ## Solution
 Step 1: SSH to App server 2
-
+```
+ssh user@app_server2
+```
 
 Step 2: open `httpd.conf` for modifying
 
@@ -18,7 +20,7 @@ Step 2: open `httpd.conf` for modifying
 sudo vi /etc/httpd/conf/httpd.conf
 ```
 
-Step 2.1: append the lines below
+Step 2.1: append the below lines in `httpd.conf` file
 
 ```
 ServerTokens Prod
@@ -31,4 +33,6 @@ Change that line to: `Options FollowSymLinks`
 
 Step 3: Restart the apache server
 
-`sudo systemctl restart httpd`
+```
+sudo systemctl restart httpd
+```
