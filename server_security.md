@@ -4,7 +4,7 @@ During a recent security audit, the application security team of xCorp Industrie
 
 a. On App Server 2 it was identified that the Apache web server is exposing the version number. Ensure this server has the appropriate settings to hide the version number of the Apache web server.
 
-b. There is a website hosted under /var/www/html/beta on App Server 2. It was detected that the directory /beta lists all of its contents while browsing the URL. Disable the directory browser listing in Apache config.
+b. There is a website hosted under `/var/www/html/beta` on App Server 2. It was detected that the directory `/beta` lists all of its contents while browsing the URL. Disable the directory browser listing in Apache config.
 
 c. Also make sure to restart the Apache service after making the changes.
 
@@ -14,7 +14,7 @@ Step 1: SSH to App server 2
 
 Step 2: open `httpd.conf` for modifying
 
-`sudo vi /etc/httpd/conf/httpd.conf`
+```sudo vi /etc/httpd/conf/httpd.conf```
 
 Step 2.1: append the lines below
 
