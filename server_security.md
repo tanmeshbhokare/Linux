@@ -27,9 +27,15 @@ ServerTokens Prod
 ServerSignature Off 
 ```
 
-#### Step 2.2: Then find the line: `Options Indexes FollowSymLinks`
+#### Step 2.2: Then find the line: 
+```
+Options Indexes FollowSymLinks
+```
 
-Change that line to: `Options FollowSymLinks`
+Change that line to: 
+```
+Options FollowSymLinks
+```
 
 #### Step 3: Restart the apache server
 
