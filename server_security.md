@@ -27,7 +27,7 @@ ServerTokens Prod
 ServerSignature Off 
 ```
 
-#### Step 2.2: Then find the line: 
+#### Step 2.2: Find the below line: 
 ```
 Options Indexes FollowSymLinks
 ```
