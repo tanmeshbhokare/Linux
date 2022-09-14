@@ -15,82 +15,13 @@ d. Please make sure script won't ask for password while copying the archive file
 
 ## Solution
 
-@stapp03 scripts]$ history
-    1  ls
-    2  ls /backup/
-    3  ls /var/www/html/news/
-    4  cd /scripts/
-    5  ls
-    6  vi news_backup.sh
-    7  sudo vi news_backup.sh
-    8  ls
-    9  zip 
-   10  zip /var/www/html/news news.zip
-   11  zip /var/www/html/news -n news.zip
-   12  l
-   13  zip -b /var/www/html/news -n news.zip
-   14  zip -b /var/www/html/news news.zip
-   15  man zip
-   16  zip news.zip /var/www/html/news
-   17  ls
-   18  rm news.zip 
-   19  ls
-   20  zip xfusioncorp_news.zip /var/www/html/news
-   21  ls
-   22  sudo vi news_backup.sh 
-   23  ls
-   24  ls /backup/
-   25  zip /backup/xfusioncorp_news.zip /var/www/html/news
-   26  ls /backup/
-   27  rm xfusioncorp_news.zip 
-   28  rm /backup/xfusioncorp_news.zip 
-   29  ls /backup/
-   30  sudo vi news_backup.sh 
-   31  rsync
-   32  scp
-   33  scp clint@stbkp01
-   34  ssh clint@stbkp01
-   35  scp /backup/xfusioncorp_news.zip clint@stbkp01:/backup/
-   36  ssh_keygen
-   37  ssh
-   38  ssh-keygen 
-   39  ssh-copy-id -i clint@stbkp01
-   40  ssh clint@stbkp01
-   41  ssh-copy-id -i clint@stbkp01
-   42  exit
-   43  ssh clint@stbkp01
-   44  ls /backup/
-   45  ls -l/backup/
-   46  ls -l /backup/
-   47  ls -l
-   48  ls -l /
-   49  cd /backup/
-   50  ll
-   51  ls -lrt
-   52  ls -lrta
-   53  cd
-   54  cd /scripts/
-   55  ls
-   56  ls -lrta
-   57  chmod 777 news_backup.sh 
-   58  sudo chmod 777 news_backup.sh 
-   59  ls -lrta
-   60  su tony
-   61  sudo vi news_backup.sh 
-   62  scp /backup/xfusioncorp_news.zip clint@stbkp01:/backup/
-   63  sudo vi news_backup.sh 
-   64  ls
-   65  sh news_backup.sh 
-   66  history
-[banner@stapp03 scripts]$ 
-
-## Step 1: SSH to App Server 3
+#### Step 1: SSH to App Server 3
 
 ```
 ssh user@appserver03
 ```
 
-## Step 2: Enable passwordless SSH to backup server
+#### Step 2: Enable passwordless SSH to backup server
 
 ```
 [user@appserver03]$ ssh-keygen`
@@ -98,7 +29,7 @@ ssh user@appserver03
 [user@appserver03]$ ssh-copy-id -i userx@bkpserver01
 ```
 
-## Step 3: Write a bash script for backup 
+#### Step 3: Write a bash script for backup 
 
 ```
 [user@appserver03 scripts]$ cat news_backup.sh 
