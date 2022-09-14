@@ -44,3 +44,8 @@ scp /backup/xcorp_news.zip user@bkpserver01:/backup/xcorp_news.zip
 
 ```
 
+#### Step 4: Make script executable for other users
+
+```
+sudo chmod 777 /scripts/news_backup.sh
+```
