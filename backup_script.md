@@ -24,9 +24,9 @@ ssh user@appserver03
 #### Step 2: Enable passwordless SSH to backup server
 
 ```
-[user@appserver03]$ ssh-keygen`
+ssh-keygen`
 
-[user@appserver03]$ ssh-copy-id -i userx@bkpserver01
+ssh-copy-id -i userx@bkpserver01
 ```
 
 #### Step 3: Write a bash script for backup 
