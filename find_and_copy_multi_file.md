@@ -17,6 +17,8 @@
 **Step 2** - Find all files with username yosuf and copy them to /media, but it will copy /home/usersdata/* as well
 
 `find /home/usersdata/* -user yousuf | cpio -pdm /media`
+OR
+`find /home/usersdata -type f -user yousuf -exec cp -r --parents {} /media \;`
 
 **Step 3** - go to destination directory
 
